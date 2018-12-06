@@ -1,0 +1,14 @@
+{
+  "name": "paret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "paret",
+    "html",
+    "contenteditable"
+  ],
+  "author": "Ian Fabs",
+  "license": "MIT"
+}
