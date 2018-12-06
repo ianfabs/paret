@@ -47,4 +47,4 @@ function pasteHtmlAtCaret(html, selectPastedContent) {
     }
   }
 const paret = pasteHtmlAtCaret;
-exports.paret = paret;
+module.exports = paret;
