@@ -47,6 +47,4 @@ function pasteHtmlAtCaret(html, selectPastedContent) {
     }
   }
 
-  module.exports = {
-      paret: pasteHtmlAtCaret
-  }
+  module.exports = pasteHtmlAtCaret;
