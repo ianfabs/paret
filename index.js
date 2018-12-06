@@ -46,5 +46,5 @@ function pasteHtmlAtCaret(html, selectPastedContent) {
       }
     }
   }
-
-  module.exports = pasteHtmlAtCaret;
+const paret = pasteHtmlAtCaret;
+exports.paret = paret;
