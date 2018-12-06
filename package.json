@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "version": "git add .",
+    "postversion": "npm publish"
+  },
   "keywords": [
     "paret",
     "html",
