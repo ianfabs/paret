@@ -6,22 +6,14 @@ function pasteHtmlAtCaret(html, selectPastedContent) {
       if (sel.getRangeAt && sel.rangeCount) {
         range = sel.getRangeAt(0);
         range.deleteContents();
-  
-        // Range.createContextualFragment() would be useful here but is
-        // only relatively recently standardized and is not supported in
-        // some browsers (IE9, for one)
-        var el = document.createElement("div");
+        let el = document.createElement("div");
         el.innerHTML = html;
-        var frag = document.createDocumentFragment(),
-          node,
-          lastNode;
+        let frag = document.createDocumentFragment(), node, lastNode;
         while ((node = el.firstChild)) {
           lastNode = frag.appendChild(node);
         }
-        var firstNode = frag.firstChild;
+        let firstNode = frag.firstChild;
         range.insertNode(frag);
-  
-        // Preserve the selection
         if (lastNode) {
           range = range.cloneRange();
           range.setStartAfter(lastNode);
@@ -36,7 +28,7 @@ function pasteHtmlAtCaret(html, selectPastedContent) {
       }
     } else if ((sel = document.selection) && sel.type != "Control") {
       // IE < 9
-      var originalRange = sel.createRange();
+      let originalRange = sel.createRange();
       originalRange.collapse(true);
       sel.createRange().pasteHTML(html);
       if (selectPastedContent) {
